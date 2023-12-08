@@ -29,14 +29,12 @@ public class TeoTimerViewModel: ObservableObject{
     
     func startTimer() {
         
-        DispatchQueue.global().async {
-            self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
-                
-                if self.seconds > 0{
-                    print("TeoTimerViewModel startTimer \(self.seconds)")
-                    DispatchQueue.main.async {
-                        self.seconds -= 1
-                    }
+        self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
+            
+            if self.seconds > 0{
+                print("TeoTimerViewModel startTimer \(self.seconds)")
+                DispatchQueue.main.async {
+                    self.seconds -= 1
                 }
             }
         }
