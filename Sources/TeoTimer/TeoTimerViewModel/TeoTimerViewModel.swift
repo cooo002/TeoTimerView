@@ -40,6 +40,7 @@ public class TeoTimerViewModel: ObservableObject{
     }
     
     func startTimer() {
+        print("TeoTimerViewModel startTimer")
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
             
             if self.seconds > 0{
@@ -49,6 +50,7 @@ public class TeoTimerViewModel: ObservableObject{
     }
     
     func stopTimer() {
+        print("TeoTimerViewModel stopTimer")
         timer?.invalidate()
         timer = nil
     }
