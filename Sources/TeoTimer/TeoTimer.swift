@@ -4,6 +4,10 @@ import SwiftUI
 
 public struct TeoTimerView: View {
     
+    public init(){
+        
+    }
+    
     public var body: some View {
         Text("TeoTimerView")
     }
