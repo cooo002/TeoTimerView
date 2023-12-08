@@ -3,20 +3,19 @@ import SwiftUI
 
 public struct TeoTimerView: View {
     
-    @ObservedObject var teoTimerViewModel: TeoTimerViewModel
-    
-    public init(
-        seconds: Int,
-        bgColor: Color = .white,
-        textColor: Color = .black
-    ){
-        
-        self.teoTimerViewModel = TeoTimerViewModel(
-            seconds: seconds,
-            bgColor: bgColor,
-            textColor: textColor
-        )
-    }
+    @StateObject var teoTimerViewModel: TeoTimerViewModel
+
+     public init(
+         seconds: Int,
+         bgColor: Color = .white,
+         textColor: Color = .black
+     ){
+         self._teoTimerViewModel = StateObject(wrappedValue: TeoTimerViewModel(
+             seconds: seconds,
+             bgColor: bgColor,
+             textColor: textColor
+         ))
+     }
     
     public var body: some View {
         HStack{

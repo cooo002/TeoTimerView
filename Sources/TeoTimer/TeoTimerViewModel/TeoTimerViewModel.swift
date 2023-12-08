@@ -21,7 +21,7 @@ public class TeoTimerViewModel: ObservableObject{
         textColor: Color,
         timer: Timer? = nil
     ) {
-        print("TeoTimerViewModel init")
+        
         self.seconds = seconds
         self.bgColor = bgColor
         self.textColor = textColor
@@ -29,11 +29,10 @@ public class TeoTimerViewModel: ObservableObject{
     }
     
     func startTimer() {
-        print("startTimer")
+        
         self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
             
             if self.seconds > 0{
-                print("TeoTimerViewModel startTimer \(self.seconds)")
                 DispatchQueue.main.async {
                     self.seconds -= 1
                 }
@@ -42,7 +41,7 @@ public class TeoTimerViewModel: ObservableObject{
     }
     
     func stopTimer() {
-        print("TeoTimerViewModel stopTimer")
+        
         timer?.invalidate()
         timer = nil
     }
