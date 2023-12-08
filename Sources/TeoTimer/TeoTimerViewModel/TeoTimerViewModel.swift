@@ -9,22 +9,26 @@ import Foundation
 import SwiftUI
 
 public class TeoTimerViewModel: ObservableObject{
-    @Published var seconds: Int
-    @Published var bgColor: Color
-    @Published var textColor: Color
     
+    @Published var seconds: Int
+    
+    var bgColor: Color
+    var textColor: Color
+    var font: Font
     var timer: Timer?
     
     public init(
         seconds: Int,
         bgColor: Color,
         textColor: Color,
+        font: Font,
         timer: Timer? = nil
     ) {
         
         self.seconds = seconds
         self.bgColor = bgColor
         self.textColor = textColor
+        self.font = font
         self.timer = timer
     }
     

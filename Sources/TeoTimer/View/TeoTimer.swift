@@ -8,19 +8,23 @@ public struct TeoTimerView: View {
      public init(
          seconds: Int,
          bgColor: Color = .white,
-         textColor: Color = .black
+         textColor: Color = .black,
+         font: Font = .system(size: 12, weight: .bold)
      ){
-         self._teoTimerViewModel = StateObject(wrappedValue: TeoTimerViewModel(
-             seconds: seconds,
-             bgColor: bgColor,
-             textColor: textColor
-         ))
+         self._teoTimerViewModel = StateObject(
+            wrappedValue: TeoTimerViewModel(
+                seconds: seconds,
+                bgColor: bgColor,
+                textColor: textColor,
+                font: font
+            )
+         )
      }
     
     public var body: some View {
         HStack{
-            Text("\(teoTimerViewModel.seconds)")
-                .font(.system(size: 12, weight: .bold))
+            Text(returnRemainTime(teoTimerViewModel.seconds))
+                .font(teoTimerViewModel.font)
                 .foregroundColor(teoTimerViewModel.textColor)
             
             Spacer()
