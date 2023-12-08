@@ -20,7 +20,7 @@ public struct TeoTimerView: View {
     
     public var body: some View {
         HStack{
-            Text(teoTimerViewModel.auctionTimeAccordingStatus)
+            Text(returnRemainTime(teoTimerViewModel.seconds))
                 .font(.system(size: 12, weight: .bold))
                 .foregroundColor(teoTimerViewModel.textColor)
             

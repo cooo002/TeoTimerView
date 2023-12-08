@@ -14,18 +14,6 @@ public class TeoTimerViewModel: ObservableObject{
     @Published var textColor: Color
     
     var timer: Timer?
-    var auctionTimeAccordingStatus: String{
-        
-        if seconds != 0{
-            
-            return returnTimeHHmmss(convertTimeForSeconds: seconds)
-            
-        }else{
-            
-            return ""
-            
-        }
-    }
     
     public init(
         seconds: Int,

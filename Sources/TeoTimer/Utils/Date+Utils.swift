@@ -52,3 +52,15 @@ func formatNumberWithoutCurrencySymbol(number: Int) -> String {
     }
 }
 
+func returnRemainTime( _ seconds: Int) -> String{
+    
+    if seconds != 0{
+        
+        return returnTimeHHmmss(convertTimeForSeconds: seconds)
+        
+    }else{
+        
+        return ""
+        
+    }
+}
