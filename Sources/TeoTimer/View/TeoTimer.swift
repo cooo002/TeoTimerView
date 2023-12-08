@@ -31,6 +31,12 @@ public struct TeoTimerView: View {
         .padding(.leading, 8)
         .padding(.trailing, 8)
         .background(teoTimerViewModel.bgColor)
+        .onAppear{
+            teoTimerViewModel.startTimer()
+        }
+        .onDisappear(){
+            teoTimerViewModel.stopTimer()
+        }
     }
 }
 
