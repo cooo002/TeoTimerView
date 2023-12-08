@@ -26,8 +26,6 @@ public struct TeoTimerView: View {
             Text(returnRemainTime(teoTimerViewModel.seconds))
                 .font(teoTimerViewModel.font)
                 .foregroundColor(teoTimerViewModel.textColor)
-            
-            Spacer()
         }
         .padding(.top, 4)
         .padding(.bottom, 4)
