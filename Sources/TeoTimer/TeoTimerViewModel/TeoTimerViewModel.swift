@@ -28,7 +28,7 @@ public class TeoTimerViewModel: ObservableObject{
     }
     
     func startTimer() {
-        
+        print("TeoTimerViewModel startTimer")
         self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
             
             if self.seconds > 0{
