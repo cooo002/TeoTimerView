@@ -5,17 +5,8 @@ SwiftUI 기반에 간단한 타이머 뷰 라이브러리입니다.
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
-
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
-
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
+SwiftUI를 기반으로 한 간단한 타이머 뷰입니다.
+배경색, 폰트, 텍스트색 등을 변경할 수 있고 추후에 여러 기능을 추가할 예정입니다.
 
 <!-- GETTING STARTED -->
 ## Getting Started
