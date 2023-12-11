@@ -9,23 +9,47 @@ public struct TeoTimerView: View {
          seconds: Int,
          bgColor: Color = .white,
          textColor: Color = .black,
-         font: Font = .system(size: 12, weight: .bold)
+         font: Font = .system(size: 12, weight: .bold),
+         alignment: TimerAlignment = .center
      ){
          self._teoTimerViewModel = StateObject(
             wrappedValue: TeoTimerViewModel(
                 seconds: seconds,
                 bgColor: bgColor,
                 textColor: textColor,
-                font: font
+                font: font,
+                alignment: alignment
             )
          )
      }
     
     public var body: some View {
         HStack{
-            Text(returnRemainTime(teoTimerViewModel.seconds))
-                .font(teoTimerViewModel.font)
-                .foregroundColor(teoTimerViewModel.textColor)
+            switch teoTimerViewModel.alignment {
+                
+            case .center:
+                
+                Text(returnRemainTime(teoTimerViewModel.seconds))
+                    .font(teoTimerViewModel.font)
+                    .foregroundColor(teoTimerViewModel.textColor)
+                
+            case .left:
+                
+                Text(returnRemainTime(teoTimerViewModel.seconds))
+                    .font(teoTimerViewModel.font)
+                    .foregroundColor(teoTimerViewModel.textColor)
+                
+                Spacer()
+                
+            case .right:
+                
+                Spacer()
+                
+                Text(returnRemainTime(teoTimerViewModel.seconds))
+                    .font(teoTimerViewModel.font)
+                    .foregroundColor(teoTimerViewModel.textColor)
+                
+            }
         }
         .padding(.top, 4)
         .padding(.bottom, 4)

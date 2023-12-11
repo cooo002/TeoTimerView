@@ -8,6 +8,12 @@
 import Foundation
 import SwiftUI
 
+public enum TimerAlignment{
+    case center
+    case left
+    case right
+}
+
 public class TeoTimerViewModel: ObservableObject{
     
     @Published var seconds: Int
@@ -15,6 +21,7 @@ public class TeoTimerViewModel: ObservableObject{
     var bgColor: Color
     var textColor: Color
     var font: Font
+    var alignment: TimerAlignment
     var timer: Timer?
     
     public init(
@@ -22,6 +29,7 @@ public class TeoTimerViewModel: ObservableObject{
         bgColor: Color,
         textColor: Color,
         font: Font,
+        alignment: TimerAlignment,
         timer: Timer? = nil
     ) {
         
@@ -29,6 +37,7 @@ public class TeoTimerViewModel: ObservableObject{
         self.bgColor = bgColor
         self.textColor = textColor
         self.font = font
+        self.alignment = alignment
         self.timer = timer
     }
     
