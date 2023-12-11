@@ -29,9 +29,13 @@ public struct TeoTimerView: View {
                 
             case .center:
                 
+                Spacer()
+                
                 Text(returnRemainTime(teoTimerViewModel.seconds))
                     .font(teoTimerViewModel.font)
                     .foregroundColor(teoTimerViewModel.textColor)
+                
+                Spacer()
                 
             case .left:
                 
